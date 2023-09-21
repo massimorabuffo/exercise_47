@@ -21,12 +21,14 @@
 
 <script>
   // code here
-  const firstName = document.getElementById("firstName").previousElementSibling.innerHTML + ' ' + document.getElementById("firstName").value;
-  console.log(firstName);
 
-  const lastName = document.getElementById("lastName").previousElementSibling.innerHTML + ' ' + document.getElementById("lastName").value;
-  console.log(lastName);
+function printDocument(array) {
+  array.forEach(el => {
+    const result = document.getElementById(el).previousElementSibling.innerHTML + ' ' + document.getElementById(el).value;
+    console.log(result);
+  });
+}
 
-  const age = document.getElementById("age").previousElementSibling.innerHTML + ' ' + document.getElementById("age").value;
-  console.log(age);
+printDocument(["firstName", "lastName", "age"]);
+
 </script>
