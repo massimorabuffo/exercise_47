@@ -22,6 +22,8 @@
 <script>
   // code here
 
+//Ho scritto una funzione che permette di ciclare inserendo un array che contiene gli id degli elementi nel document come paramentro della funzione, non ho saputo fare di meglio.
+
 function printDocument(array) {
   array.forEach(el => {
     const result = document.getElementById(el).previousElementSibling.innerHTML + ' ' + document.getElementById(el).value;
